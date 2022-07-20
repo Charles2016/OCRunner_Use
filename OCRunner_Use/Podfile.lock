@@ -1,0 +1,46 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
+  - OCRunner (1.2.6):
+    - ORPatchFile (= 1.2.1)
+  - ORPatchFile (1.2.1)
+  - SSZipArchive (2.4.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Masonry
+  - OCRunner
+  - SSZipArchive
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Masonry
+    - OCRunner
+    - ORPatchFile
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  OCRunner: c7de1f998e1cf669145378010619cb93936c5dc8
+  ORPatchFile: c108309c6f66de392b98d70743f4af76fb3d150a
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+
+PODFILE CHECKSUM: 5b48e06759ebf909ea4dc1c5a701689a7c630587
+
+COCOAPODS: 1.10.1
