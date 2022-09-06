@@ -8,39 +8,157 @@
 
 /* Begin PBXBuildFile section */
 		430F620628863D1600BC4E7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F620528863D1600BC4E7C /* AppDelegate.m */; };
-		430F620C28863D1600BC4E7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F620B28863D1600BC4E7C /* ViewController.m */; };
+		430F620C28863D1600BC4E7C /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F620B28863D1600BC4E7C /* MainVC.m */; };
 		430F621128863D1A00BC4E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430F621028863D1A00BC4E7C /* Assets.xcassets */; };
 		430F621428863D1A00BC4E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430F621228863D1A00BC4E7C /* LaunchScreen.storyboard */; };
 		430F621728863D1A00BC4E7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F621628863D1A00BC4E7C /* main.m */; };
 		430F622A28867FB100BC4E7C /* libPods-OCRunner_Use.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430F622928867FB100BC4E7C /* libPods-OCRunner_Use.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		43A971132887E6B800350119 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A971102887E6B800350119 /* ViewController2.m */; };
-		43A971162887ECE600350119 /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A971152887ECE600350119 /* 222.png */; };
-		56966C602886FA9900FFA630 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 56966C5F2886FA9900FFA630 /* ViewController3.m */; };
-		56966C6C288702BD00FFA630 /* binarypatch in Resources */ = {isa = PBXBuildFile; fileRef = 56966C6A288702BD00FFA630 /* binarypatch */; };
-		56966C6D288702BD00FFA630 /* jsonpatch in Resources */ = {isa = PBXBuildFile; fileRef = 56966C6B288702BD00FFA630 /* jsonpatch */; };
+		43418C0428C5EC57007D63BF /* built-in.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BA628C5EC57007D63BF /* built-in.m */; };
+		43418C0528C5EC57007D63BF /* util.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BA928C5EC57007D63BF /* util.m */; };
+		43418C0628C5EC57007D63BF /* ORSystemFunctionPointerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BAA28C5EC57007D63BF /* ORSystemFunctionPointerTable.m */; };
+		43418C0728C5EC57007D63BF /* SymbolSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = 43418BAE28C5EC57007D63BF /* SymbolSearch.c */; };
+		43418C0828C5EC57007D63BF /* ORSearchedFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BB028C5EC57007D63BF /* ORSearchedFunction.m */; };
+		43418C0928C5EC57007D63BF /* RunnerClasses+Execute.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BB128C5EC57007D63BF /* RunnerClasses+Execute.m */; };
+		43418C0A28C5EC57007D63BF /* ORInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BB428C5EC57007D63BF /* ORInterpreter.m */; };
+		43418C0B28C5EC57007D63BF /* ORCoreImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BB828C5EC57007D63BF /* ORCoreImp.m */; };
+		43418C0C28C5EC57007D63BF /* ORCoreFunctionRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BBA28C5EC57007D63BF /* ORCoreFunctionRegister.m */; };
+		43418C0D28C5EC57007D63BF /* ORCoreFunctionCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BBD28C5EC57007D63BF /* ORCoreFunctionCall.m */; };
+		43418C0E28C5EC57007D63BF /* ORTypeVarPair+libffi.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BC028C5EC57007D63BF /* ORTypeVarPair+libffi.m */; };
+		43418C0F28C5EC57007D63BF /* ORHandleTypeEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BC128C5EC57007D63BF /* ORHandleTypeEncode.m */; };
+		43418C1028C5EC57007D63BF /* ORTypeVarPair+TypeEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BC428C5EC57007D63BF /* ORTypeVarPair+TypeEncode.m */; };
+		43418C1128C5EC57007D63BF /* ORffiResultCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BC528C5EC57007D63BF /* ORffiResultCache.m */; };
+		43418C1228C5EC57007D63BF /* RunnerClasses+Recover.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BC628C5EC57007D63BF /* RunnerClasses+Recover.m */; };
+		43418C1428C5EC57007D63BF /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43418BD128C5EC57007D63BF /* libffi.a */; };
+		43418C1528C5EC57007D63BF /* ORStructDeclare.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BD528C5EC57007D63BF /* ORStructDeclare.m */; };
+		43418C1628C5EC57007D63BF /* MFBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BD928C5EC57007D63BF /* MFBlock.m */; };
+		43418C1728C5EC57007D63BF /* ORThreadContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BDC28C5EC57007D63BF /* ORThreadContext.m */; };
+		43418C1828C5EC57007D63BF /* MFMethodMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BDF28C5EC57007D63BF /* MFMethodMapTable.m */; };
+		43418C1928C5EC57007D63BF /* MFStaticVarTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE028C5EC57007D63BF /* MFStaticVarTable.m */; };
+		43418C1A28C5EC57007D63BF /* MFPropertyMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE228C5EC57007D63BF /* MFPropertyMapTable.m */; };
+		43418C1B28C5EC57007D63BF /* ORGlobalFunctionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE428C5EC57007D63BF /* ORGlobalFunctionTable.m */; };
+		43418C1C28C5EC57007D63BF /* MFVarDeclareChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE528C5EC57007D63BF /* MFVarDeclareChain.m */; };
+		43418C1D28C5EC57007D63BF /* MFScopeChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE828C5EC57007D63BF /* MFScopeChain.m */; };
+		43418C1E28C5EC57007D63BF /* MFValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BE928C5EC57007D63BF /* MFValue.m */; };
+		43418C2028C5EC57007D63BF /* JSONPatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BEF28C5EC57007D63BF /* JSONPatchHelper.m */; };
+		43418C2128C5EC58007D63BF /* RunnerClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BF128C5EC57007D63BF /* RunnerClasses.m */; };
+		43418C2228C5EC58007D63BF /* BinaryPatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BF328C5EC57007D63BF /* BinaryPatchHelper.m */; };
+		43418C2328C5EC58007D63BF /* ORPatchFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BF628C5EC57007D63BF /* ORPatchFile.m */; };
+		43418C2428C5EC58007D63BF /* AppDelegate+OCRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418BF928C5EC57007D63BF /* AppDelegate+OCRunner.m */; };
+		43418C2528C5EC58007D63BF /* Scripts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 43418BFA28C5EC57007D63BF /* Scripts.bundle */; };
+		43418C2828C5EC58007D63BF /* jsonpatch in Resources */ = {isa = PBXBuildFile; fileRef = 43418BFE28C5EC57007D63BF /* jsonpatch */; };
+		43418C2B28C5EC58007D63BF /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = 43418C0328C5EC57007D63BF /* 222.png */; };
+		43418C2D28C5ED6B007D63BF /* binarypatch in Resources */ = {isa = PBXBuildFile; fileRef = 43418C2C28C5ED6B007D63BF /* binarypatch */; };
+		43CE69D728C6EA7000D6F3CC /* AddNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 43418C0028C5EC57007D63BF /* AddNewVC.m */; };
+		43CE69DA28C6F30000D6F3CC /* ChangeObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE69D928C6F30000D6F3CC /* ChangeObjectVC.m */; };
+		43CE69E128C6F63600D6F3CC /* AddNewPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE69E028C6F63600D6F3CC /* AddNewPageVC.m */; };
+		56966C602886FA9900FFA630 /* ChangeMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56966C5F2886FA9900FFA630 /* ChangeMethodVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		430F620128863D1600BC4E7C /* OCRunner_Use.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRunner_Use.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430F620428863D1600BC4E7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		430F620528863D1600BC4E7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		430F620A28863D1600BC4E7C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		430F620B28863D1600BC4E7C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		430F620A28863D1600BC4E7C /* MainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		430F620B28863D1600BC4E7C /* MainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		430F621028863D1A00BC4E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430F621328863D1A00BC4E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430F621528863D1A00BC4E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430F621628863D1A00BC4E7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		430F622928867FB100BC4E7C /* libPods-OCRunner_Use.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-OCRunner_Use.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43A971102887E6B800350119 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		43A971112887E6B800350119 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
-		43A971122887E6B800350119 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		43A971152887ECE600350119 /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
+		43418BA528C5EC57007D63BF /* ORHandleTypeEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORHandleTypeEncode.h; sourceTree = "<group>"; };
+		43418BA628C5EC57007D63BF /* built-in.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "built-in.m"; sourceTree = "<group>"; };
+		43418BA728C5EC57007D63BF /* ORTypeVarPair+TypeEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ORTypeVarPair+TypeEncode.h"; sourceTree = "<group>"; };
+		43418BA928C5EC57007D63BF /* util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = util.m; sourceTree = "<group>"; };
+		43418BAA28C5EC57007D63BF /* ORSystemFunctionPointerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSystemFunctionPointerTable.m; sourceTree = "<group>"; };
+		43418BAB28C5EC57007D63BF /* SymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolSearch.h; sourceTree = "<group>"; };
+		43418BAC28C5EC57007D63BF /* ORSearchedFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSearchedFunction.h; sourceTree = "<group>"; };
+		43418BAD28C5EC57007D63BF /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		43418BAE28C5EC57007D63BF /* SymbolSearch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SymbolSearch.c; sourceTree = "<group>"; };
+		43418BAF28C5EC57007D63BF /* ORSystemFunctionPointerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSystemFunctionPointerTable.h; sourceTree = "<group>"; };
+		43418BB028C5EC57007D63BF /* ORSearchedFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSearchedFunction.m; sourceTree = "<group>"; };
+		43418BB128C5EC57007D63BF /* RunnerClasses+Execute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RunnerClasses+Execute.m"; sourceTree = "<group>"; };
+		43418BB228C5EC57007D63BF /* ORffiResultCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORffiResultCache.h; sourceTree = "<group>"; };
+		43418BB328C5EC57007D63BF /* RunnerClasses+Recover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RunnerClasses+Recover.h"; sourceTree = "<group>"; };
+		43418BB428C5EC57007D63BF /* ORInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORInterpreter.m; sourceTree = "<group>"; };
+		43418BB528C5EC57007D63BF /* OCRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCRunner.h; sourceTree = "<group>"; };
+		43418BB728C5EC57007D63BF /* ORCoreImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCoreImp.h; sourceTree = "<group>"; };
+		43418BB828C5EC57007D63BF /* ORCoreImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCoreImp.m; sourceTree = "<group>"; };
+		43418BBA28C5EC57007D63BF /* ORCoreFunctionRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCoreFunctionRegister.m; sourceTree = "<group>"; };
+		43418BBB28C5EC57007D63BF /* ORCoreFunctionCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCoreFunctionCall.h; sourceTree = "<group>"; };
+		43418BBC28C5EC57007D63BF /* ORTypeVarPair+libffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ORTypeVarPair+libffi.h"; sourceTree = "<group>"; };
+		43418BBD28C5EC57007D63BF /* ORCoreFunctionCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCoreFunctionCall.m; sourceTree = "<group>"; };
+		43418BBE28C5EC57007D63BF /* ORCoreFunctionRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCoreFunctionRegister.h; sourceTree = "<group>"; };
+		43418BBF28C5EC57007D63BF /* ORCoreFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCoreFunction.h; sourceTree = "<group>"; };
+		43418BC028C5EC57007D63BF /* ORTypeVarPair+libffi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ORTypeVarPair+libffi.m"; sourceTree = "<group>"; };
+		43418BC128C5EC57007D63BF /* ORHandleTypeEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORHandleTypeEncode.m; sourceTree = "<group>"; };
+		43418BC228C5EC57007D63BF /* RunnerClasses+Execute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RunnerClasses+Execute.h"; sourceTree = "<group>"; };
+		43418BC328C5EC57007D63BF /* built-in.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "built-in.h"; sourceTree = "<group>"; };
+		43418BC428C5EC57007D63BF /* ORTypeVarPair+TypeEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ORTypeVarPair+TypeEncode.m"; sourceTree = "<group>"; };
+		43418BC528C5EC57007D63BF /* ORffiResultCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORffiResultCache.m; sourceTree = "<group>"; };
+		43418BC628C5EC57007D63BF /* RunnerClasses+Recover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RunnerClasses+Recover.m"; sourceTree = "<group>"; };
+		43418BC728C5EC57007D63BF /* README-CN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-CN.md"; sourceTree = "<group>"; };
+		43418BC928C5EC57007D63BF /* ffitarget_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm64.h; sourceTree = "<group>"; };
+		43418BCA28C5EC57007D63BF /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
+		43418BCB28C5EC57007D63BF /* ffi_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm.h; sourceTree = "<group>"; };
+		43418BCC28C5EC57007D63BF /* ffi_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_i386.h; sourceTree = "<group>"; };
+		43418BCD28C5EC57007D63BF /* ffitarget_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_x86_64.h; sourceTree = "<group>"; };
+		43418BCE28C5EC57007D63BF /* ffi_x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_x86_64.h; sourceTree = "<group>"; };
+		43418BCF28C5EC57007D63BF /* ffitarget_arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_arm.h; sourceTree = "<group>"; };
+		43418BD028C5EC57007D63BF /* ffitarget_i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget_i386.h; sourceTree = "<group>"; };
+		43418BD128C5EC57007D63BF /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
+		43418BD228C5EC57007D63BF /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
+		43418BD328C5EC57007D63BF /* ffi_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi_arm64.h; sourceTree = "<group>"; };
+		43418BD528C5EC57007D63BF /* ORStructDeclare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORStructDeclare.m; sourceTree = "<group>"; };
+		43418BD628C5EC57007D63BF /* MFPropertyMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPropertyMapTable.h; sourceTree = "<group>"; };
+		43418BD728C5EC57007D63BF /* MFStaticVarTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFStaticVarTable.h; sourceTree = "<group>"; };
+		43418BD828C5EC57007D63BF /* runenv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runenv.h; sourceTree = "<group>"; };
+		43418BD928C5EC57007D63BF /* MFBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFBlock.m; sourceTree = "<group>"; };
+		43418BDA28C5EC57007D63BF /* MFVarDeclareChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFVarDeclareChain.h; sourceTree = "<group>"; };
+		43418BDB28C5EC57007D63BF /* ORGlobalFunctionTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGlobalFunctionTable.h; sourceTree = "<group>"; };
+		43418BDC28C5EC57007D63BF /* ORThreadContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORThreadContext.m; sourceTree = "<group>"; };
+		43418BDD28C5EC57007D63BF /* MFValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFValue.h; sourceTree = "<group>"; };
+		43418BDE28C5EC57007D63BF /* MFScopeChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFScopeChain.h; sourceTree = "<group>"; };
+		43418BDF28C5EC57007D63BF /* MFMethodMapTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFMethodMapTable.m; sourceTree = "<group>"; };
+		43418BE028C5EC57007D63BF /* MFStaticVarTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFStaticVarTable.m; sourceTree = "<group>"; };
+		43418BE128C5EC57007D63BF /* ORStructDeclare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORStructDeclare.h; sourceTree = "<group>"; };
+		43418BE228C5EC57007D63BF /* MFPropertyMapTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPropertyMapTable.m; sourceTree = "<group>"; };
+		43418BE328C5EC57007D63BF /* ORThreadContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORThreadContext.h; sourceTree = "<group>"; };
+		43418BE428C5EC57007D63BF /* ORGlobalFunctionTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGlobalFunctionTable.m; sourceTree = "<group>"; };
+		43418BE528C5EC57007D63BF /* MFVarDeclareChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVarDeclareChain.m; sourceTree = "<group>"; };
+		43418BE628C5EC57007D63BF /* MFBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFBlock.h; sourceTree = "<group>"; };
+		43418BE728C5EC57007D63BF /* MFMethodMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMethodMapTable.h; sourceTree = "<group>"; };
+		43418BE828C5EC57007D63BF /* MFScopeChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFScopeChain.m; sourceTree = "<group>"; };
+		43418BE928C5EC57007D63BF /* MFValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFValue.m; sourceTree = "<group>"; };
+		43418BEA28C5EC57007D63BF /* ORInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORInterpreter.h; sourceTree = "<group>"; };
+		43418BEC28C5EC57007D63BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		43418BEF28C5EC57007D63BF /* JSONPatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONPatchHelper.m; sourceTree = "<group>"; };
+		43418BF028C5EC57007D63BF /* BinaryPatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryPatchHelper.h; sourceTree = "<group>"; };
+		43418BF128C5EC57007D63BF /* RunnerClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunnerClasses.m; sourceTree = "<group>"; };
+		43418BF228C5EC57007D63BF /* ORPatchFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORPatchFile.h; sourceTree = "<group>"; };
+		43418BF328C5EC57007D63BF /* BinaryPatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryPatchHelper.m; sourceTree = "<group>"; };
+		43418BF428C5EC57007D63BF /* ClassSecretKeyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassSecretKeyMap.h; sourceTree = "<group>"; };
+		43418BF528C5EC57007D63BF /* JSONPatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONPatchHelper.h; sourceTree = "<group>"; };
+		43418BF628C5EC57007D63BF /* ORPatchFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORPatchFile.m; sourceTree = "<group>"; };
+		43418BF728C5EC57007D63BF /* RunnerClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunnerClasses.h; sourceTree = "<group>"; };
+		43418BF928C5EC57007D63BF /* AppDelegate+OCRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+OCRunner.m"; sourceTree = "<group>"; };
+		43418BFA28C5EC57007D63BF /* Scripts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Scripts.bundle; sourceTree = "<group>"; };
+		43418BFB28C5EC57007D63BF /* PatchGenerator */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PatchGenerator; sourceTree = "<group>"; };
+		43418BFC28C5EC57007D63BF /* AppDelegate+OCRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+OCRunner.h"; sourceTree = "<group>"; };
+		43418BFE28C5EC57007D63BF /* jsonpatch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonpatch; sourceTree = "<group>"; };
+		43418C0028C5EC57007D63BF /* AddNewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewVC.m; sourceTree = "<group>"; };
+		43418C0128C5EC57007D63BF /* ChangeMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeMethodVC.m; sourceTree = "<group>"; };
+		43418C0328C5EC57007D63BF /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
+		43418C2C28C5ED6B007D63BF /* binarypatch */ = {isa = PBXFileReference; lastKnownFileType = file; path = binarypatch; sourceTree = "<group>"; };
+		43CE69D828C6F30000D6F3CC /* ChangeObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeObjectVC.h; sourceTree = "<group>"; };
+		43CE69D928C6F30000D6F3CC /* ChangeObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeObjectVC.m; sourceTree = "<group>"; };
+		43CE69DB28C6F42000D6F3CC /* AddNewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewVC.h; sourceTree = "<group>"; };
+		43CE69DD28C6F44E00D6F3CC /* ChangeObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeObjectVC.m; sourceTree = "<group>"; };
+		43CE69DF28C6F63600D6F3CC /* AddNewPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewPageVC.h; sourceTree = "<group>"; };
+		43CE69E028C6F63600D6F3CC /* AddNewPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewPageVC.m; sourceTree = "<group>"; };
+		43CE69E228C6F71600D6F3CC /* AddNewPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewPageVC.m; sourceTree = "<group>"; };
 		4797DAD1DD3A0638E6D92807 /* libPods-OCRunner_Use.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCRunner_Use.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		56966C522886F8A400FFA630 /* Scripts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Scripts.bundle; sourceTree = "<group>"; };
-		56966C5E2886FA9900FFA630 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
-		56966C5F2886FA9900FFA630 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
-		56966C6A288702BD00FFA630 /* binarypatch */ = {isa = PBXFileReference; lastKnownFileType = file; path = binarypatch; sourceTree = "<group>"; };
-		56966C6B288702BD00FFA630 /* jsonpatch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonpatch; sourceTree = "<group>"; };
+		56966C5E2886FA9900FFA630 /* ChangeMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeMethodVC.h; sourceTree = "<group>"; };
+		56966C5F2886FA9900FFA630 /* ChangeMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeMethodVC.m; sourceTree = "<group>"; };
 		6072E43EC64BCD9AC3663F9A /* Pods-OCRunner_Use.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRunner_Use.debug.xcconfig"; path = "Target Support Files/Pods-OCRunner_Use/Pods-OCRunner_Use.debug.xcconfig"; sourceTree = "<group>"; };
 		6656037BD01E1F1ED4396808 /* Pods-OCRunner_Use.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRunner_Use.release.xcconfig"; path = "Target Support Files/Pods-OCRunner_Use/Pods-OCRunner_Use.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				430F622A28867FB100BC4E7C /* libPods-OCRunner_Use.a in Frameworks */,
+				43418C1428C5EC57007D63BF /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,16 +206,17 @@
 		430F620328863D1600BC4E7C /* OCRunner_Use */ = {
 			isa = PBXGroup;
 			children = (
-				43A9710F2887E6B800350119 /* HotPath */,
+				43418BA328C5EC57007D63BF /* OCRunnerLib */,
 				430F620428863D1600BC4E7C /* AppDelegate.h */,
 				430F620528863D1600BC4E7C /* AppDelegate.m */,
-				430F620A28863D1600BC4E7C /* ViewController.h */,
-				430F620B28863D1600BC4E7C /* ViewController.m */,
-				56966C5E2886FA9900FFA630 /* ViewController3.h */,
-				56966C5F2886FA9900FFA630 /* ViewController3.m */,
-				56966C6A288702BD00FFA630 /* binarypatch */,
-				56966C6B288702BD00FFA630 /* jsonpatch */,
-				56966C522886F8A400FFA630 /* Scripts.bundle */,
+				430F620A28863D1600BC4E7C /* MainVC.h */,
+				430F620B28863D1600BC4E7C /* MainVC.m */,
+				56966C5E2886FA9900FFA630 /* ChangeMethodVC.h */,
+				56966C5F2886FA9900FFA630 /* ChangeMethodVC.m */,
+				43CE69D828C6F30000D6F3CC /* ChangeObjectVC.h */,
+				43CE69D928C6F30000D6F3CC /* ChangeObjectVC.m */,
+				43CE69DF28C6F63600D6F3CC /* AddNewPageVC.h */,
+				43CE69E028C6F63600D6F3CC /* AddNewPageVC.m */,
 				430F621028863D1A00BC4E7C /* Assets.xcassets */,
 				430F621228863D1A00BC4E7C /* LaunchScreen.storyboard */,
 				430F621528863D1A00BC4E7C /* Info.plist */,
@@ -105,13 +225,184 @@
 			path = OCRunner_Use;
 			sourceTree = "<group>";
 		};
-		43A9710F2887E6B800350119 /* HotPath */ = {
+		43418BA328C5EC57007D63BF /* OCRunnerLib */ = {
 			isa = PBXGroup;
 			children = (
-				43A971112887E6B800350119 /* ViewController1.m */,
-				43A971122887E6B800350119 /* ViewController2.h */,
-				43A971102887E6B800350119 /* ViewController2.m */,
-				43A971152887ECE600350119 /* 222.png */,
+				43418BF828C5EC57007D63BF /* ConfigPath */,
+				43418BFF28C5EC57007D63BF /* HotPath */,
+				43418BA428C5EC57007D63BF /* OCRunner */,
+				43418BEB28C5EC57007D63BF /* ORPatchFile */,
+			);
+			path = OCRunnerLib;
+			sourceTree = "<group>";
+		};
+		43418BA428C5EC57007D63BF /* OCRunner */ = {
+			isa = PBXGroup;
+			children = (
+				43418BC328C5EC57007D63BF /* built-in.h */,
+				43418BA628C5EC57007D63BF /* built-in.m */,
+				43418BC828C5EC57007D63BF /* libffi */,
+				43418BB528C5EC57007D63BF /* OCRunner.h */,
+				43418BB628C5EC57007D63BF /* ORCoreImp */,
+				43418BB228C5EC57007D63BF /* ORffiResultCache.h */,
+				43418BC528C5EC57007D63BF /* ORffiResultCache.m */,
+				43418BA528C5EC57007D63BF /* ORHandleTypeEncode.h */,
+				43418BC128C5EC57007D63BF /* ORHandleTypeEncode.m */,
+				43418BEA28C5EC57007D63BF /* ORInterpreter.h */,
+				43418BB428C5EC57007D63BF /* ORInterpreter.m */,
+				43418BA728C5EC57007D63BF /* ORTypeVarPair+TypeEncode.h */,
+				43418BC428C5EC57007D63BF /* ORTypeVarPair+TypeEncode.m */,
+				43418BC728C5EC57007D63BF /* README-CN.md */,
+				43418BD428C5EC57007D63BF /* RunEnv */,
+				43418BC228C5EC57007D63BF /* RunnerClasses+Execute.h */,
+				43418BB128C5EC57007D63BF /* RunnerClasses+Execute.m */,
+				43418BB328C5EC57007D63BF /* RunnerClasses+Recover.h */,
+				43418BC628C5EC57007D63BF /* RunnerClasses+Recover.m */,
+				43418BA828C5EC57007D63BF /* Util */,
+			);
+			path = OCRunner;
+			sourceTree = "<group>";
+		};
+		43418BA828C5EC57007D63BF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				43418BA928C5EC57007D63BF /* util.m */,
+				43418BAA28C5EC57007D63BF /* ORSystemFunctionPointerTable.m */,
+				43418BAB28C5EC57007D63BF /* SymbolSearch.h */,
+				43418BAC28C5EC57007D63BF /* ORSearchedFunction.h */,
+				43418BAD28C5EC57007D63BF /* util.h */,
+				43418BAE28C5EC57007D63BF /* SymbolSearch.c */,
+				43418BAF28C5EC57007D63BF /* ORSystemFunctionPointerTable.h */,
+				43418BB028C5EC57007D63BF /* ORSearchedFunction.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		43418BB628C5EC57007D63BF /* ORCoreImp */ = {
+			isa = PBXGroup;
+			children = (
+				43418BB728C5EC57007D63BF /* ORCoreImp.h */,
+				43418BB828C5EC57007D63BF /* ORCoreImp.m */,
+				43418BB928C5EC57007D63BF /* ORCoreFunction */,
+			);
+			path = ORCoreImp;
+			sourceTree = "<group>";
+		};
+		43418BB928C5EC57007D63BF /* ORCoreFunction */ = {
+			isa = PBXGroup;
+			children = (
+				43418BBA28C5EC57007D63BF /* ORCoreFunctionRegister.m */,
+				43418BBB28C5EC57007D63BF /* ORCoreFunctionCall.h */,
+				43418BBC28C5EC57007D63BF /* ORTypeVarPair+libffi.h */,
+				43418BBD28C5EC57007D63BF /* ORCoreFunctionCall.m */,
+				43418BBE28C5EC57007D63BF /* ORCoreFunctionRegister.h */,
+				43418BBF28C5EC57007D63BF /* ORCoreFunction.h */,
+				43418BC028C5EC57007D63BF /* ORTypeVarPair+libffi.m */,
+			);
+			path = ORCoreFunction;
+			sourceTree = "<group>";
+		};
+		43418BC828C5EC57007D63BF /* libffi */ = {
+			isa = PBXGroup;
+			children = (
+				43418BC928C5EC57007D63BF /* ffitarget_arm64.h */,
+				43418BCA28C5EC57007D63BF /* ffitarget.h */,
+				43418BCB28C5EC57007D63BF /* ffi_arm.h */,
+				43418BCC28C5EC57007D63BF /* ffi_i386.h */,
+				43418BCD28C5EC57007D63BF /* ffitarget_x86_64.h */,
+				43418BCE28C5EC57007D63BF /* ffi_x86_64.h */,
+				43418BCF28C5EC57007D63BF /* ffitarget_arm.h */,
+				43418BD028C5EC57007D63BF /* ffitarget_i386.h */,
+				43418BD128C5EC57007D63BF /* libffi.a */,
+				43418BD228C5EC57007D63BF /* ffi.h */,
+				43418BD328C5EC57007D63BF /* ffi_arm64.h */,
+			);
+			path = libffi;
+			sourceTree = "<group>";
+		};
+		43418BD428C5EC57007D63BF /* RunEnv */ = {
+			isa = PBXGroup;
+			children = (
+				43418BD528C5EC57007D63BF /* ORStructDeclare.m */,
+				43418BD628C5EC57007D63BF /* MFPropertyMapTable.h */,
+				43418BD728C5EC57007D63BF /* MFStaticVarTable.h */,
+				43418BD828C5EC57007D63BF /* runenv.h */,
+				43418BD928C5EC57007D63BF /* MFBlock.m */,
+				43418BDA28C5EC57007D63BF /* MFVarDeclareChain.h */,
+				43418BDB28C5EC57007D63BF /* ORGlobalFunctionTable.h */,
+				43418BDC28C5EC57007D63BF /* ORThreadContext.m */,
+				43418BDD28C5EC57007D63BF /* MFValue.h */,
+				43418BDE28C5EC57007D63BF /* MFScopeChain.h */,
+				43418BDF28C5EC57007D63BF /* MFMethodMapTable.m */,
+				43418BE028C5EC57007D63BF /* MFStaticVarTable.m */,
+				43418BE128C5EC57007D63BF /* ORStructDeclare.h */,
+				43418BE228C5EC57007D63BF /* MFPropertyMapTable.m */,
+				43418BE328C5EC57007D63BF /* ORThreadContext.h */,
+				43418BE428C5EC57007D63BF /* ORGlobalFunctionTable.m */,
+				43418BE528C5EC57007D63BF /* MFVarDeclareChain.m */,
+				43418BE628C5EC57007D63BF /* MFBlock.h */,
+				43418BE728C5EC57007D63BF /* MFMethodMapTable.h */,
+				43418BE828C5EC57007D63BF /* MFScopeChain.m */,
+				43418BE928C5EC57007D63BF /* MFValue.m */,
+			);
+			path = RunEnv;
+			sourceTree = "<group>";
+		};
+		43418BEB28C5EC57007D63BF /* ORPatchFile */ = {
+			isa = PBXGroup;
+			children = (
+				43418BEC28C5EC57007D63BF /* README.md */,
+				43418BED28C5EC57007D63BF /* oc2mangoLib */,
+			);
+			path = ORPatchFile;
+			sourceTree = "<group>";
+		};
+		43418BED28C5EC57007D63BF /* oc2mangoLib */ = {
+			isa = PBXGroup;
+			children = (
+				43418BEE28C5EC57007D63BF /* PatchFile */,
+			);
+			path = oc2mangoLib;
+			sourceTree = "<group>";
+		};
+		43418BEE28C5EC57007D63BF /* PatchFile */ = {
+			isa = PBXGroup;
+			children = (
+				43418BEF28C5EC57007D63BF /* JSONPatchHelper.m */,
+				43418BF028C5EC57007D63BF /* BinaryPatchHelper.h */,
+				43418BF128C5EC57007D63BF /* RunnerClasses.m */,
+				43418BF228C5EC57007D63BF /* ORPatchFile.h */,
+				43418BF328C5EC57007D63BF /* BinaryPatchHelper.m */,
+				43418BF428C5EC57007D63BF /* ClassSecretKeyMap.h */,
+				43418BF528C5EC57007D63BF /* JSONPatchHelper.h */,
+				43418BF628C5EC57007D63BF /* ORPatchFile.m */,
+				43418BF728C5EC57007D63BF /* RunnerClasses.h */,
+			);
+			path = PatchFile;
+			sourceTree = "<group>";
+		};
+		43418BF828C5EC57007D63BF /* ConfigPath */ = {
+			isa = PBXGroup;
+			children = (
+				43418BFC28C5EC57007D63BF /* AppDelegate+OCRunner.h */,
+				43418BF928C5EC57007D63BF /* AppDelegate+OCRunner.m */,
+				43418BFE28C5EC57007D63BF /* jsonpatch */,
+				43418C2C28C5ED6B007D63BF /* binarypatch */,
+				43418BFB28C5EC57007D63BF /* PatchGenerator */,
+				43418BFA28C5EC57007D63BF /* Scripts.bundle */,
+			);
+			path = ConfigPath;
+			sourceTree = "<group>";
+		};
+		43418BFF28C5EC57007D63BF /* HotPath */ = {
+			isa = PBXGroup;
+			children = (
+				43418C0328C5EC57007D63BF /* 222.png */,
+				43CE69E228C6F71600D6F3CC /* AddNewPageVC.m */,
+				43418C0128C5EC57007D63BF /* ChangeMethodVC.m */,
+				43CE69DD28C6F44E00D6F3CC /* ChangeObjectVC.m */,
+				43CE69DB28C6F42000D6F3CC /* AddNewVC.h */,
+				43418C0028C5EC57007D63BF /* AddNewVC.m */,
 			);
 			path = HotPath;
 			sourceTree = "<group>";
@@ -136,8 +427,8 @@
 				430F61FD28863D1600BC4E7C /* Sources */,
 				430F61FE28863D1600BC4E7C /* Frameworks */,
 				430F61FF28863D1600BC4E7C /* Resources */,
-				56966C512886F21300FFA630 /* PatchGeneratorBinary */,
 				56966C582886F90400FFA630 /* PatchGeneratorJson */,
+				56966C512886F21300FFA630 /* PatchGeneratorBinary */,
 			);
 			buildRules = (
 			);
@@ -186,10 +477,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				430F621428863D1A00BC4E7C /* LaunchScreen.storyboard in Resources */,
-				43A971162887ECE600350119 /* 222.png in Resources */,
-				56966C6C288702BD00FFA630 /* binarypatch in Resources */,
+				43418C2B28C5EC58007D63BF /* 222.png in Resources */,
+				43418C2828C5EC58007D63BF /* jsonpatch in Resources */,
+				43418C2528C5EC58007D63BF /* Scripts.bundle in Resources */,
+				43418C2D28C5ED6B007D63BF /* binarypatch in Resources */,
 				430F621128863D1A00BC4E7C /* Assets.xcassets in Resources */,
-				56966C6D288702BD00FFA630 /* jsonpatch in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +490,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		56966C512886F21300FFA630 /* PatchGeneratorBinary */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -212,7 +504,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/OCRunner_Use/PatchGenerator -files $SRCROOT/OCRunner_Use/HotPath -refs  $SRCROOT/OCRunner_Use/Scripts.bundle -output $SRCROOT/OCRunner_Use/binarypatch\n";
+			shellScript = "$SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/PatchGenerator -files $SRCROOT/OCRunner_Use/OCRunnerLib/HotPath -refs  $SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/Scripts.bundle -output $SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/binarypatch\n";
+			showEnvVarsInLog = 0;
 		};
 		56966C582886F90400FFA630 /* PatchGeneratorJson */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -230,7 +523,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/OCRunner_Use/PatchGenerator -files $SRCROOT/OCRunner_Use/HotPath -refs  $SRCROOT/OCRunner_Use/Scripts.bundle -output $SRCROOT/OCRunner_Use/jsonpatch -type json\n";
+			shellScript = "$SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/PatchGenerator -files $SRCROOT/OCRunner_Use/OCRunnerLib/HotPath -refs  $SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/Scripts.bundle -output $SRCROOT/OCRunner_Use/OCRunnerLib/ConfigPath/jsonpatch -type json\n";
+			showEnvVarsInLog = 0;
 		};
 		FF0AD138969440179D0B8C35 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -261,11 +555,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430F620C28863D1600BC4E7C /* ViewController.m in Sources */,
-				56966C602886FA9900FFA630 /* ViewController3.m in Sources */,
-				43A971132887E6B800350119 /* ViewController2.m in Sources */,
+				43CE69D728C6EA7000D6F3CC /* AddNewVC.m in Sources */,
+				430F620C28863D1600BC4E7C /* MainVC.m in Sources */,
+				43418C1928C5EC57007D63BF /* MFStaticVarTable.m in Sources */,
+				43418C0E28C5EC57007D63BF /* ORTypeVarPair+libffi.m in Sources */,
+				43418C2228C5EC58007D63BF /* BinaryPatchHelper.m in Sources */,
+				43418C1C28C5EC57007D63BF /* MFVarDeclareChain.m in Sources */,
+				43418C1828C5EC57007D63BF /* MFMethodMapTable.m in Sources */,
+				43418C1528C5EC57007D63BF /* ORStructDeclare.m in Sources */,
+				43418C0528C5EC57007D63BF /* util.m in Sources */,
+				56966C602886FA9900FFA630 /* ChangeMethodVC.m in Sources */,
+				43418C1128C5EC57007D63BF /* ORffiResultCache.m in Sources */,
+				43418C0828C5EC57007D63BF /* ORSearchedFunction.m in Sources */,
+				43418C0C28C5EC57007D63BF /* ORCoreFunctionRegister.m in Sources */,
+				43418C1E28C5EC57007D63BF /* MFValue.m in Sources */,
+				43418C2128C5EC58007D63BF /* RunnerClasses.m in Sources */,
+				43418C1A28C5EC57007D63BF /* MFPropertyMapTable.m in Sources */,
+				43418C0728C5EC57007D63BF /* SymbolSearch.c in Sources */,
+				43418C0428C5EC57007D63BF /* built-in.m in Sources */,
+				43418C0B28C5EC57007D63BF /* ORCoreImp.m in Sources */,
 				430F620628863D1600BC4E7C /* AppDelegate.m in Sources */,
+				43418C0D28C5EC57007D63BF /* ORCoreFunctionCall.m in Sources */,
+				43418C2028C5EC57007D63BF /* JSONPatchHelper.m in Sources */,
+				43418C1D28C5EC57007D63BF /* MFScopeChain.m in Sources */,
 				430F621728863D1A00BC4E7C /* main.m in Sources */,
+				43418C1628C5EC57007D63BF /* MFBlock.m in Sources */,
+				43418C1228C5EC57007D63BF /* RunnerClasses+Recover.m in Sources */,
+				43418C0F28C5EC57007D63BF /* ORHandleTypeEncode.m in Sources */,
+				43418C0928C5EC57007D63BF /* RunnerClasses+Execute.m in Sources */,
+				43418C1728C5EC57007D63BF /* ORThreadContext.m in Sources */,
+				43418C2428C5EC58007D63BF /* AppDelegate+OCRunner.m in Sources */,
+				43418C1028C5EC57007D63BF /* ORTypeVarPair+TypeEncode.m in Sources */,
+				43418C0628C5EC57007D63BF /* ORSystemFunctionPointerTable.m in Sources */,
+				43CE69DA28C6F30000D6F3CC /* ChangeObjectVC.m in Sources */,
+				43CE69E128C6F63600D6F3CC /* AddNewPageVC.m in Sources */,
+				43418C2328C5EC58007D63BF /* ORPatchFile.m in Sources */,
+				43418C1B28C5EC57007D63BF /* ORGlobalFunctionTable.m in Sources */,
+				43418C0A28C5EC57007D63BF /* ORInterpreter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +738,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/OCRunner/OCRunner/libffi",
+					"$(PROJECT_DIR)/OCRunner_Use/OCRunnerSDK/OCRunner/libffi",
+					"$(PROJECT_DIR)/OCRunner_Use/OCRunnerLib/OCRunner/libffi",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.bundle.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -432,6 +764,12 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/OCRunner/OCRunner/libffi",
+					"$(PROJECT_DIR)/OCRunner_Use/OCRunnerSDK/OCRunner/libffi",
+					"$(PROJECT_DIR)/OCRunner_Use/OCRunnerLib/OCRunner/libffi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.bundle.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";

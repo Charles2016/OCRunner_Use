@@ -12,7 +12,7 @@ def pods
     #pod 'AFNetworking'
     pod 'AFNetworking'
     pod 'SSZipArchive'
-    pod 'OCRunner'
+#    pod 'OCRunner'
 end
 target ‘OCRunner_Use’ do
 pods

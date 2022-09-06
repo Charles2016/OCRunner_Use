@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6764EC87B5EB711F70136BA611DF2108"
-               BuildableName = "libPods-OCRunner_Use.a"
-               BlueprintName = "Pods-OCRunner_Use"
+               BlueprintIdentifier = "55AF53E6C77A10ED4985E04D74A8878E"
+               BuildableName = "libMasonry.a"
+               BlueprintName = "Masonry"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
