@@ -33,7 +33,7 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    NSURL *URL = [NSURL URLWithString:@"https://github.com/Charles2016/OCRunner_Use/blob/master/OCRunner_Use/OCRunnerLib/ConfigPath/binarypatch"];
+    NSURL *URL = [NSURL URLWithString:@"https://github.com/Charles2016/OCRunner_Use/raw/master/OCRunner_Use/OCRunnerLib/ConfigPath/binarypatch_Use.zip"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
