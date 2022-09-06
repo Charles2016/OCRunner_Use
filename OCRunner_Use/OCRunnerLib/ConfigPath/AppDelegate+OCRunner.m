@@ -10,10 +10,13 @@
 #import "ORInterpreter.h"
 #import "AFNetworking.h"
 #import <SSZipArchive.h>
+#import "ORSystemFunctionPointerTable.h"
 
 @implementation AppDelegate (OCRunner)
 
 - (void)loadOCRunner {
+    [ORSystemFunctionPointerTable reg:@"CGPointEqualToPoint" pointer:&CGPointEqualToPoint];
+    [ORSystemFunctionPointerTable reg:@"CGSizeEqualToSize" pointer:&CGSizeEqualToSize];
 #if 1
     NSString *finalPath = [[NSBundle mainBundle] pathForResource:@"binarypatch" ofType:nil];
     [ORInterpreter excuteBinaryPatchFile:finalPath];
@@ -25,7 +28,7 @@
         [ORInterpreter excuteBinaryPatchFile:finalPath];
         return;
     }
-    //创建信号量
+    //创建信号量，保证先把补丁包下载下来再进入主页面，若补丁包大的话，可以考虑不阻塞主线程，给予等待loding显示
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
