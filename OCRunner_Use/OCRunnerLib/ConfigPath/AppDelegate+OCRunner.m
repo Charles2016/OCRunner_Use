@@ -17,7 +17,7 @@
 - (void)loadOCRunner {
     [ORSystemFunctionPointerTable reg:@"CGPointEqualToPoint" pointer:&CGPointEqualToPoint];
     [ORSystemFunctionPointerTable reg:@"CGSizeEqualToSize" pointer:&CGSizeEqualToSize];
-#if 1
+#if 0
     NSString *finalPath = [[NSBundle mainBundle] pathForResource:@"binarypatch" ofType:nil];
     [ORInterpreter excuteBinaryPatchFile:finalPath];
 #else
@@ -33,7 +33,7 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    NSURL *URL = [NSURL URLWithString:@"https://github.com/Charles2016/OCRunner_Use/blob/master/OCRunner_Use/OCRunnerLib/ConfigPath/binarypatch_Use.zip"];
+    NSURL *URL = [NSURL URLWithString:@"https://github.com/Charles2016/OCRunner_Use/blob/master/OCRunner_Use/OCRunnerLib/ConfigPath/binarypatch"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
@@ -47,11 +47,8 @@
         if ([fileManager fileExistsAtPath:finalPath]) {
             [fileManager removeItemAtPath:finalPath error:nil];
         }
-        [SSZipArchive unzipFileAtPath:filePathStr toDestination:toPath progressHandler:nil completionHandler:^(NSString *path, BOOL succeeded, NSError *error) {
-           NSLog(@"File unzip to: %@", finalPath);
-            [ORInterpreter excuteBinaryPatchFile:finalPath];
-            dispatch_semaphore_signal(semaphore);
-        }];
+        [ORInterpreter excuteBinaryPatchFile:finalPath];
+        dispatch_semaphore_signal(semaphore);
     }];
     [downloadTask resume];
     //信号量等待
