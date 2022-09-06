@@ -47,8 +47,11 @@
         if ([fileManager fileExistsAtPath:finalPath]) {
             [fileManager removeItemAtPath:finalPath error:nil];
         }
-        [ORInterpreter excuteBinaryPatchFile:finalPath];
-        dispatch_semaphore_signal(semaphore);
+        [SSZipArchive unzipFileAtPath:filePathStr toDestination:toPath progressHandler:nil completionHandler:^(NSString *path, BOOL succeeded, NSError *error) {
+           NSLog(@"File unzip to: %@", finalPath);
+            [ORInterpreter excuteBinaryPatchFile:finalPath];
+            dispatch_semaphore_signal(semaphore);
+        }];
     }];
     [downloadTask resume];
     //信号量等待
