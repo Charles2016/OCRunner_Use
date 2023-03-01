@@ -17,7 +17,7 @@
 - (void)loadOCRunner {
     [ORSystemFunctionPointerTable reg:@"CGPointEqualToPoint" pointer:&CGPointEqualToPoint];
     [ORSystemFunctionPointerTable reg:@"CGSizeEqualToSize" pointer:&CGSizeEqualToSize];
-#if 0
+#if 1
     NSString *finalPath = [[NSBundle mainBundle] pathForResource:@"binarypatch" ofType:nil];
     [ORInterpreter excuteBinaryPatchFile:finalPath];
 #else

@@ -266,14 +266,14 @@
 		43418BA828C5EC57007D63BF /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				43418BA928C5EC57007D63BF /* util.m */,
-				43418BAA28C5EC57007D63BF /* ORSystemFunctionPointerTable.m */,
-				43418BAB28C5EC57007D63BF /* SymbolSearch.h */,
 				43418BAC28C5EC57007D63BF /* ORSearchedFunction.h */,
-				43418BAD28C5EC57007D63BF /* util.h */,
-				43418BAE28C5EC57007D63BF /* SymbolSearch.c */,
-				43418BAF28C5EC57007D63BF /* ORSystemFunctionPointerTable.h */,
 				43418BB028C5EC57007D63BF /* ORSearchedFunction.m */,
+				43418BAF28C5EC57007D63BF /* ORSystemFunctionPointerTable.h */,
+				43418BAA28C5EC57007D63BF /* ORSystemFunctionPointerTable.m */,
+				43418BAE28C5EC57007D63BF /* SymbolSearch.c */,
+				43418BAB28C5EC57007D63BF /* SymbolSearch.h */,
+				43418BAD28C5EC57007D63BF /* util.h */,
+				43418BA928C5EC57007D63BF /* util.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -291,12 +291,12 @@
 		43418BB928C5EC57007D63BF /* ORCoreFunction */ = {
 			isa = PBXGroup;
 			children = (
-				43418BBA28C5EC57007D63BF /* ORCoreFunctionRegister.m */,
+				43418BBF28C5EC57007D63BF /* ORCoreFunction.h */,
 				43418BBB28C5EC57007D63BF /* ORCoreFunctionCall.h */,
-				43418BBC28C5EC57007D63BF /* ORTypeVarPair+libffi.h */,
 				43418BBD28C5EC57007D63BF /* ORCoreFunctionCall.m */,
 				43418BBE28C5EC57007D63BF /* ORCoreFunctionRegister.h */,
-				43418BBF28C5EC57007D63BF /* ORCoreFunction.h */,
+				43418BBA28C5EC57007D63BF /* ORCoreFunctionRegister.m */,
+				43418BBC28C5EC57007D63BF /* ORTypeVarPair+libffi.h */,
 				43418BC028C5EC57007D63BF /* ORTypeVarPair+libffi.m */,
 			);
 			path = ORCoreFunction;
@@ -305,17 +305,17 @@
 		43418BC828C5EC57007D63BF /* libffi */ = {
 			isa = PBXGroup;
 			children = (
-				43418BC928C5EC57007D63BF /* ffitarget_arm64.h */,
-				43418BCA28C5EC57007D63BF /* ffitarget.h */,
 				43418BCB28C5EC57007D63BF /* ffi_arm.h */,
-				43418BCC28C5EC57007D63BF /* ffi_i386.h */,
-				43418BCD28C5EC57007D63BF /* ffitarget_x86_64.h */,
-				43418BCE28C5EC57007D63BF /* ffi_x86_64.h */,
-				43418BCF28C5EC57007D63BF /* ffitarget_arm.h */,
-				43418BD028C5EC57007D63BF /* ffitarget_i386.h */,
-				43418BD128C5EC57007D63BF /* libffi.a */,
-				43418BD228C5EC57007D63BF /* ffi.h */,
 				43418BD328C5EC57007D63BF /* ffi_arm64.h */,
+				43418BCC28C5EC57007D63BF /* ffi_i386.h */,
+				43418BCE28C5EC57007D63BF /* ffi_x86_64.h */,
+				43418BD228C5EC57007D63BF /* ffi.h */,
+				43418BCF28C5EC57007D63BF /* ffitarget_arm.h */,
+				43418BC928C5EC57007D63BF /* ffitarget_arm64.h */,
+				43418BD028C5EC57007D63BF /* ffitarget_i386.h */,
+				43418BCD28C5EC57007D63BF /* ffitarget_x86_64.h */,
+				43418BCA28C5EC57007D63BF /* ffitarget.h */,
+				43418BD128C5EC57007D63BF /* libffi.a */,
 			);
 			path = libffi;
 			sourceTree = "<group>";
@@ -323,27 +323,27 @@
 		43418BD428C5EC57007D63BF /* RunEnv */ = {
 			isa = PBXGroup;
 			children = (
-				43418BD528C5EC57007D63BF /* ORStructDeclare.m */,
-				43418BD628C5EC57007D63BF /* MFPropertyMapTable.h */,
-				43418BD728C5EC57007D63BF /* MFStaticVarTable.h */,
-				43418BD828C5EC57007D63BF /* runenv.h */,
-				43418BD928C5EC57007D63BF /* MFBlock.m */,
-				43418BDA28C5EC57007D63BF /* MFVarDeclareChain.h */,
-				43418BDB28C5EC57007D63BF /* ORGlobalFunctionTable.h */,
-				43418BDC28C5EC57007D63BF /* ORThreadContext.m */,
-				43418BDD28C5EC57007D63BF /* MFValue.h */,
-				43418BDE28C5EC57007D63BF /* MFScopeChain.h */,
-				43418BDF28C5EC57007D63BF /* MFMethodMapTable.m */,
-				43418BE028C5EC57007D63BF /* MFStaticVarTable.m */,
-				43418BE128C5EC57007D63BF /* ORStructDeclare.h */,
-				43418BE228C5EC57007D63BF /* MFPropertyMapTable.m */,
-				43418BE328C5EC57007D63BF /* ORThreadContext.h */,
-				43418BE428C5EC57007D63BF /* ORGlobalFunctionTable.m */,
-				43418BE528C5EC57007D63BF /* MFVarDeclareChain.m */,
 				43418BE628C5EC57007D63BF /* MFBlock.h */,
+				43418BD928C5EC57007D63BF /* MFBlock.m */,
 				43418BE728C5EC57007D63BF /* MFMethodMapTable.h */,
+				43418BDF28C5EC57007D63BF /* MFMethodMapTable.m */,
+				43418BD628C5EC57007D63BF /* MFPropertyMapTable.h */,
+				43418BE228C5EC57007D63BF /* MFPropertyMapTable.m */,
+				43418BDE28C5EC57007D63BF /* MFScopeChain.h */,
 				43418BE828C5EC57007D63BF /* MFScopeChain.m */,
+				43418BD728C5EC57007D63BF /* MFStaticVarTable.h */,
+				43418BE028C5EC57007D63BF /* MFStaticVarTable.m */,
+				43418BDD28C5EC57007D63BF /* MFValue.h */,
 				43418BE928C5EC57007D63BF /* MFValue.m */,
+				43418BDA28C5EC57007D63BF /* MFVarDeclareChain.h */,
+				43418BE528C5EC57007D63BF /* MFVarDeclareChain.m */,
+				43418BDB28C5EC57007D63BF /* ORGlobalFunctionTable.h */,
+				43418BE428C5EC57007D63BF /* ORGlobalFunctionTable.m */,
+				43418BE128C5EC57007D63BF /* ORStructDeclare.h */,
+				43418BD528C5EC57007D63BF /* ORStructDeclare.m */,
+				43418BE328C5EC57007D63BF /* ORThreadContext.h */,
+				43418BDC28C5EC57007D63BF /* ORThreadContext.m */,
+				43418BD828C5EC57007D63BF /* runenv.h */,
 			);
 			path = RunEnv;
 			sourceTree = "<group>";
@@ -368,15 +368,15 @@
 		43418BEE28C5EC57007D63BF /* PatchFile */ = {
 			isa = PBXGroup;
 			children = (
-				43418BEF28C5EC57007D63BF /* JSONPatchHelper.m */,
 				43418BF028C5EC57007D63BF /* BinaryPatchHelper.h */,
-				43418BF128C5EC57007D63BF /* RunnerClasses.m */,
-				43418BF228C5EC57007D63BF /* ORPatchFile.h */,
 				43418BF328C5EC57007D63BF /* BinaryPatchHelper.m */,
 				43418BF428C5EC57007D63BF /* ClassSecretKeyMap.h */,
 				43418BF528C5EC57007D63BF /* JSONPatchHelper.h */,
+				43418BEF28C5EC57007D63BF /* JSONPatchHelper.m */,
+				43418BF228C5EC57007D63BF /* ORPatchFile.h */,
 				43418BF628C5EC57007D63BF /* ORPatchFile.m */,
 				43418BF728C5EC57007D63BF /* RunnerClasses.h */,
+				43418BF128C5EC57007D63BF /* RunnerClasses.m */,
 			);
 			path = PatchFile;
 			sourceTree = "<group>";

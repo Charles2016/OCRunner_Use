@@ -27,37 +27,54 @@
 }
 - (void)initialWithFieldTypeEncodes:(NSArray *)fieldEncodes{
     NSMutableDictionary *keySizes = [NSMutableDictionary dictionary];
-    NSMutableDictionary *keyTyeps = [NSMutableDictionary dictionary];
+    NSMutableDictionary *keyTypes = [NSMutableDictionary dictionary];
+    NSMutableDictionary <NSString *, NSNumber *>*keyAlignments = [NSMutableDictionary dictionary];
+    __block NSUInteger structAlignment = 0;
     NSCAssert(self.keys.count == fieldEncodes.count, @"");
     [fieldEncodes enumerateObjectsUsingBlock:^(NSString *elementEncode, NSUInteger idx, BOOL * _Nonnull stop) {
         NSUInteger size;
-        NSGetSizeAndAlignment(elementEncode.UTF8String, &size, NULL);
+        NSUInteger align;
+        NSGetSizeAndAlignment(elementEncode.UTF8String, &size, &align);
         keySizes[self.keys[idx]] = @(size);
-        keyTyeps[self.keys[idx]] = elementEncode;
+        keyTypes[self.keys[idx]] = elementEncode;
+        keyAlignments[self.keys[idx]] = @(align);
+        structAlignment = MAX(structAlignment, align);
     }];
     self.keySizes = keySizes;
-    self.keyTypeEncodes = keyTyeps;
+    self.keyTypeEncodes = keyTypes;
     // 内存对齐
     // 第一个变量的偏移量为0，其余变量的偏移量需要是变量内存大小的的整数倍
+    NSUInteger finalSize = 0;
     NSMutableDictionary <NSString *,NSNumber *>*keyOffsets = [NSMutableDictionary dictionary];
     for (int i = 0; i < self.keys.count; i++) {
+        NSString *curKey = self.keys[i];
         if (i == 0) {
-            keyOffsets[self.keys[i]] = @(0);
+            keyOffsets[curKey] = @(0);
             continue;
         }
         NSString *lastKey = self.keys[i - 1];
         NSUInteger lastSize = self.keySizes[lastKey].unsignedIntValue;
         NSUInteger lastOffset = keyOffsets[lastKey].unsignedIntValue;
         NSUInteger offset = lastOffset + lastSize;
-        NSUInteger size = self.keySizes[self.keys[i]].unsignedIntegerValue;
-        size = MIN(size, 8); // 在参数对齐数和默认对齐数8取小
-        if (offset % size != 0) {
-            offset = ((offset + size - 1) / size) * size;
+        // 在参数对齐数和默认对齐数8取小
+        NSUInteger maxElementSize = keyAlignments[curKey].unsignedIntegerValue;
+        if (offset % maxElementSize != 0) {
+            offset = ((offset + maxElementSize - 1) / maxElementSize) * maxElementSize;
         }
         keyOffsets[self.keys[i]] = @(offset);
+        finalSize = offset + self.keySizes[curKey].unsignedIntValue;
     }
+    if (finalSize % structAlignment != 0) {
+        finalSize = ((finalSize + structAlignment - 1) / structAlignment) * structAlignment;
+    }
+    size_ = finalSize;
     self.keyOffsets = keyOffsets;
 }
+
+- (NSInteger)structSize {
+    return size_;
+}
+
 - (void)dealloc
 {
     if (self.typeEncoding != NULL) {
