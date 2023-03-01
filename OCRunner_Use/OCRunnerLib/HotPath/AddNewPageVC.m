@@ -27,7 +27,7 @@
     label.textColor = UIColor.blackColor;
     label.font = [UIFont systemFontOfSize:13];
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"gggggggggg";
+    label.text = @"ggggggggggggg热更改变";
     [VC.view addSubview:label];
     label.frame = CGRectMake((VC.view.frame.size.width - 280) / 2, 220, 280, 60);
 }
