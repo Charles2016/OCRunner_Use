@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddNewPageVC : UIViewController
 
++ (void)showTip:(UIViewController *)VC;
+
 @end
 
 NS_ASSUME_NONNULL_END

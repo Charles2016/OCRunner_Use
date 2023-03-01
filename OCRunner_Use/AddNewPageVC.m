@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUI];
+    [AddNewPageVC showTip:self];
 }
 
 - (void)setUI {
@@ -51,6 +52,16 @@
 #pragma mark - buttonActions
 - (void)buttonAction:(UIButton *)button {
     
+}
+
++ (void)showTip:(UIViewController *)VC {
+    UILabel *label = [[UILabel alloc]init];
+    label.textColor = UIColor.blackColor;
+    label.font = [UIFont systemFontOfSize:13];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"xxxx";
+    [VC.view addSubview:label];
+    label.frame = CGRectMake((VC.view.frame.size.width - 280) / 2, 420, 280, 60);
 }
 
 @end
